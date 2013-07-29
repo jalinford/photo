@@ -1,5 +1,5 @@
-<h1>Sample Photo Slideshow</h1>
-
+<h1><%= @slideshow.title %></h1>
+<p><%= @slideshow.description %></p>
 <div class="row">
   <div class="small-11 small-centered columns">
 <div class="slideshow-wrapper">
@@ -8,7 +8,7 @@
 	<% @photos.each do |photo| %>
   <li>
     <%= image_tag photo.photo_url(:slideshow).to_s %>
-    <div class="orbit-caption"><%= photo.title %>: <%= photo.description %></div>
+    <div class="orbit-caption"><%= photo.title %><%= ": " + photo.description  unless photo.description == "" %></div>
   </li>
   <% end %>
 </ul>
