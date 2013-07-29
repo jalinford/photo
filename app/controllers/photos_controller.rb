@@ -1,9 +1,9 @@
 class PhotosController < ApplicationController
   def index
-  	@photos = Photo.all
+  	@photos = Photo.order("date DESC")
   end
 
   def slideshow
-  	@photos = Photo.all
+  	@photos = Photo.order("date DESC")
   end
 end
