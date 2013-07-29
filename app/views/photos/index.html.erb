@@ -1,0 +1,18 @@
+<h1>Sample Photo Slideshow</h1>
+<p>A collection of photos</p>
+
+<% if @photos.count > 0 %>
+<div class="large-8 columns">
+  <div class="row">
+  	<% @photos.each do |photo| %>
+	    <div class="large-4 small-6 columns">
+	      <%= image_tag photo.photo_url(:thumb).to_s %>
+	      
+	      <div class="panel">
+	        <h5><%= photo.title %></h5>
+	       </div>
+	    </div>
+	  <% end %>
+	</div>
+</div>
+<% end %>
