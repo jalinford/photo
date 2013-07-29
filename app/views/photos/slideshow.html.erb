@@ -1,15 +1,18 @@
 <h1>Sample Photo Slideshow</h1>
 <p>A collection of photos</p>
 
+<div class="row">
+  <div class="small-11 small-centered columns">
 <div class="slideshow-wrapper">
   <div class="preloader"></div>
 <ul data-orbit>
 	<% @photos.each do |photo| %>
   <li>
-    <% # image_tag painting.image_url.to_s %>
-    <%= image_tag photo.photo_url.to_s %>
+    <%= image_tag photo.photo_url(:slideshow).to_s %>
     <div class="orbit-caption"><%= photo.title %>: <%= photo.description %></div>
   </li>
   <% end %>
 </ul>
+</div>
+</div>
 </div>
