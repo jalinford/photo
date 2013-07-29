@@ -3,7 +3,6 @@ Photos::Application.routes.draw do
 
   match 'photos', :to => "photos#index"
 
-  match 'slideshow', :to => "photos#slideshow"
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
